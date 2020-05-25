@@ -53,28 +53,28 @@ async def _(event):
     #packname = f"JayukeStickers"
     #packshortname = f"GujjuBot_{userid}_ns"  # format: Uni_Borg_userid
     if userid == 948408212:
-        packname = f"JayukeStickers"
-        packshortname = "Jayu_ke_locker_me"
+        packname = f"@HappyBoy59"
+        packshortname = "HappyBoy59"
     elif userid ==631515786:
         packname = f"@vireso's fav pack"
         packshortname = "vireso_s_pack"
     else:
-        packname = f"GujjuBot{userid}"
-        packshortname = f"GujjuBot_{userid}_ns"
+        packname = f"@happyBoy59"
+        packshortname = f"HappyBoy59_ns"
     await event.edit("`Look dat way,it's a gurl!\nMeanwhile, lemme kang this stcker over hehe ヽ༼ ಠ益ಠ ༽ﾉ`")
 
     is_a_s = is_it_animated_sticker(reply_message)
-    file_ext_ns_ion = "GujjuBot_Sticker.png"
+    file_ext_ns_ion = "happyBoy_sticker.png"
     file = await borg.download_file(reply_message.media)
     uploaded_sticker = None
     if is_a_s:
         file_ext_ns_ion = "AnimatedSticker.tgs"
         uploaded_sticker = await borg.upload_file(file, file_name=file_ext_ns_ion)
-        packname = f"{userid}'s @AnimatedStickersGroup"
+        packname = f"@HappyBoy59"
         if userid == 948408212:
             packshortname = "Jayu_Animated"
         else:
-            packshortname = f"GujjuBot_{userid}_an" # format: Uni_Borg_userid
+            packshortname = f"HappyBoy0509_an" # format: Uni_Borg_userid
     elif not is_message_image(reply_message):
         await event.edit("Invalid message type")
         return
@@ -134,14 +134,14 @@ async def _(event):
                 while response.text == FILLED_UP_DADDY:
                     pack += 1
                     prevv = int(pack) - 1
-                    packname = f"{user.first_name}'s GujjuBot Vol.{pack}"
-                    packshortname = f"Vol_{pack}_with_{user.first_name}"
+                    packname = f"{@Happyboy59}'s Vol.{pack}"
+                    packshortname = f"Vol_{pack}_with_{happyboy59}"
                     #if userid == 948408212:
                        # packname = f"{user.first_name}'s GujjuBot Vol.{pack}"
                        # packshortname = "Vol._{pack}_Jayu_ke_locker_me"
                    # else:
-                       # packname = f"Vol._{pack}_GujjuBot{userid}"
-                        #packshortname = f"Vol._{pack}_GujjuBot_{userid}_ns"
+                       # packname = f"@HappyBoy59 Vol.{pack}"
+                        #packshortname = f"Vol._{pack}_Happyboy_ns"
                     if not await stickerset_exists(bot_conv, packshortname):
                         await event.edit("**Pack No. **" + str(prevv) + "** full! Making a new Pack, Vol. **" + str(pack))
                         if is_a_s:
