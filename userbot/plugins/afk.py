@@ -24,7 +24,7 @@ async def set_not_afk(event):
         try:
             await borg.send_message(  # pylint:disable=E0602
                 Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
-                "Mera Malik A Gaya Hurray🥳🥳🥳"
+                "Afk"
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             await borg.send_message(  # pylint:disable=E0602
@@ -121,7 +121,7 @@ async def on_afk(event):
             else:
                 afk_since = f"`{int(seconds)}s` **ago**"
         msg = None
-        message_to_reply = f"HappyBoy Has Been Gone For {afk_since}\nWhere He Is:Athalam Solla Mudiyathu " + \
+        message_to_reply = f"HappyBoy Has Been Gone For {afk_since}\nWhere He Is:Planet Earth" + \
             f"\n\n__ I'll Back__\n**REASON**: {reason}" \
             if reason \
             else f"**Important Notice**\n\n[This User Is Ded Forever...](https://telegra.ph//file/a53fa950ff31781d5930a.jpg) "
